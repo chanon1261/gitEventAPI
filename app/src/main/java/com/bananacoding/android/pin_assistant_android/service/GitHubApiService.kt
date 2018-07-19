@@ -7,6 +7,10 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 import rx.Observable
+import okhttp3.ResponseBody
+import retrofit2.http.PUT
+
+
 
 
 interface GitHubApiService {
@@ -19,5 +23,8 @@ interface GitHubApiService {
 
     @GET("/repos/{owner}/{repo}/readme")
     fun getRepositoryReadme(@Path("owner") owner: String, @Path("repo") repository: String): Observable<RepositoryReadme>
+
+    @PUT("gists/{id}")
+    fun updateGist(@Path("id") id: String): Observable<RepositorySearchResults>
 
 }

@@ -70,5 +70,8 @@ class DemoActivity : RxAppCompatActivity() {
                         mainResultsSpinner.hide()
                     }
                 }
+
+        //
+        gitHubService.updateGist("")
     }
 }
