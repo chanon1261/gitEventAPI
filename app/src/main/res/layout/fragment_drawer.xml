@@ -1,0 +1,271 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/rl_drawer_header"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:background="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="24dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_demo" />
+
+                <TextView
+                    android:id="@+id/txt_user_fullname"
+                    style="@style/menu_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Josie Vega" />
+
+                <TextView
+                    android:id="@+id/txt_user_email"
+                    style="@style/sub_title_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="amalia_rowe@yahoo.com" />
+            </LinearLayout>
+
+            <View
+                style="@style/HorizontalDividerStyle"
+                android:layout_gravity="bottom" />
+        </FrameLayout>
+
+        <!--<android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_drawer_list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"/>!-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:id="@+id/home"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Home"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/train"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Smart Home"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/test"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Test"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/report"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Report"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+            <FrameLayout
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Profile"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"/>
+            <FrameLayout
+                android:id="@+id/sign_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="top" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/home"
+                        android:layout_marginLeft="@dimen/material_padding"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/app_left"
+                        style="@style/txt_menu"
+                        android:text="Sign out"
+                        android:layout_gravity="center"
+                        />
+                </LinearLayout>
+                <View
+                    style="@style/HorizontalDividerStyle"
+                    android:layout_gravity="bottom" />
+            </FrameLayout>
+
+            <TextView
+                style="@style/menu_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/material_padding"
+                android:text="©2018 Training App. all rights reserved" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -20,6 +20,10 @@ import kotlinx.android.synthetic.main.activity_demo.*
 import timber.log.Timber
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
+import org.json.JSONObject
+import okhttp3.RequestBody
+
+
 
 class DemoActivity : RxAppCompatActivity() {
 

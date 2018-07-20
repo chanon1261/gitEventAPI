@@ -9,4 +9,25 @@
     <string name="error">Error</string>
     <string name="search_repositories">Search repositories…</string>
     <string name="search_repositories_error">Error performing search, disabling search field.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nav_item_home">Home</string>
+    <string name="nav_item_train">Smart Home</string>
+    <string name="nav_item_test">Test</string>
+    <string name="nav_item_report">Report</string>
+    <string name="nav_item_profile">Profile</string>
+    <string name="nav_item_sign_out">Sing out</string>
+
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_train</item>
+        <item>@string/nav_item_test</item>
+        <item>@string/nav_item_report</item>
+        <item>@string/nav_item_profile</item>
+        <item>@string/nav_item_sign_out</item>
+    </string-array>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
 </resources>

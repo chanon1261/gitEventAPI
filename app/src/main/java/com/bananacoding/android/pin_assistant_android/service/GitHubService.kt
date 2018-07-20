@@ -26,4 +26,6 @@ open class GitHubService {
     fun getRepository(owner: String, repository: String) = gitHubApiService.getRepository(owner, repository)
 
     fun getRepositoryReadme(owner: String, repository: String) = gitHubApiService.getRepositoryReadme(owner, repository)
+
+    fun updateGist(updateGist: String) = gitHubApiService.updateGist(updateGist)
 }

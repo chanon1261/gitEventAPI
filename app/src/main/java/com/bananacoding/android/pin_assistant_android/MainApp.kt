@@ -4,6 +4,7 @@ import android.app.Application
 import com.bananacoding.android.pin_assistant_android.dagger.AppComponent
 import com.bananacoding.android.pin_assistant_android.dagger.AppModule
 import com.bananacoding.android.pin_assistant_android.dagger.DaggerAppComponent
+import com.labdogstudio.tutorial.Gdx3DTutorialGame
 import net.danlew.android.joda.JodaTimeAndroid
 import timber.log.Timber
 
