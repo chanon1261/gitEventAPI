@@ -7,10 +7,11 @@ import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration
 import com.bananacoding.android.pin_assistant_android.MainApp
 import com.bananacoding.android.pin_assistant_android.R
 import com.labdogstudio.tutorial.Gdx3DTutorialGame
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity
 import rx.Observable
 import java.util.concurrent.TimeUnit
 
-class MainActivity : AndroidApplication() {
+class MainActivity : AppCompatActivity() /*AndroidApplication()*/ {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,9 +23,7 @@ class MainActivity : AndroidApplication() {
             startActivity(DemoActivity.getStartIntent(this))
         }*/
 
-        val config = AndroidApplicationConfiguration()
-        initialize(Gdx3DTutorialGame(), config)
-
-        //initializeForView()
+        /*val config = AndroidApplicationConfiguration()
+        initialize(Gdx3DTutorialGame(), config)*/
     }
 }
