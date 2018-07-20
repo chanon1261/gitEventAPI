@@ -117,7 +117,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/app_left"
                         style="@style/txt_menu"
-                        android:text="Train"
+                        android:text="Smart Home"
                         android:layout_gravity="center"
                         />
                 </LinearLayout>

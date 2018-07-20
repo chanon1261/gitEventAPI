@@ -9,8 +9,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.view.inputmethod.InputMethodManager
-import com.badlogic.gdx.backends.android.AndroidApplication
-import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration
 import com.bananacoding.android.pin_assistant_android.MainApp
 import com.bananacoding.android.pin_assistant_android.R
 import com.bananacoding.android.pin_assistant_android.data.ScreenEnum
@@ -18,8 +16,7 @@ import com.bananacoding.android.pin_assistant_android.extension.empty
 import com.bananacoding.android.pin_assistant_android.fragment.BlankFragment
 import com.bananacoding.android.pin_assistant_android.fragment.DrawerFragment
 import com.bananacoding.android.pin_assistant_android.fragment.MainFragment
-import com.labdogstudio.tutorial.Gdx3DTutorialGame
-import com.trello.rxlifecycle.components.support.RxAppCompatActivity
+import com.bananacoding.android.pin_assistant_android.fragment.SmartHomeFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import rx.Observable
 import java.util.concurrent.TimeUnit
@@ -69,7 +66,7 @@ class MainActivity : AppCompatActivity(), DrawerFragment.FragmentDrawerListener 
 
     override fun onDrawerItemSelected(view: View, position: Int) {
         when(position) {
-            ScreenEnum.Train.screenCode ->{
+            ScreenEnum.SmartHome.screenCode ->{
                 val dummyProcessTime = 500L
                 Observable.timer(dummyProcessTime, TimeUnit.MILLISECONDS).subscribe {
                     displayView(position)
@@ -93,7 +90,7 @@ class MainActivity : AppCompatActivity(), DrawerFragment.FragmentDrawerListener 
             }
             1 -> {
                 //setSupportActionBar(toolbar)
-                fragment = BlankFragment.fragment(this)
+                fragment = SmartHomeFragment.fragment(this)
                 title = getString(R.string.nav_item_train)
             }
             2 -> {

@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.Toolbar
 import android.view.GestureDetector
@@ -19,7 +18,6 @@ import com.bananacoding.android.pin_assistant_android.adapter.DrawerAdapter
 import com.bananacoding.android.pin_assistant_android.data.ScreenEnum
 import io.reactivex.disposables.Disposable
 import kotlinx.android.synthetic.main.fragment_drawer.*
-import java.util.ArrayList
 
 class DrawerFragment : Fragment() {
 
@@ -53,7 +51,7 @@ class DrawerFragment : Fragment() {
             containerView?.let { it1 -> mDrawerLayout?.closeDrawer(it1) }
         }
         train.setOnClickListener {
-            drawerListener?.onDrawerItemSelected(view, ScreenEnum.Train.screenCode)
+            drawerListener?.onDrawerItemSelected(view, ScreenEnum.SmartHome.screenCode)
             containerView?.let { it1 -> mDrawerLayout?.closeDrawer(it1) }
         }
         test.setOnClickListener {
