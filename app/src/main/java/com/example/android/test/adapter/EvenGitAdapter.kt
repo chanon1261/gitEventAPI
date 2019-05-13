@@ -43,6 +43,7 @@ class EvenGitAdapter(val context: Context) : RecyclerView.Adapter<EvenGitAdapter
             binding.setVariable(BR.login, item.actor.login)
             binding.setVariable(BR.display, item.actor.display_login)
             binding.setVariable(BR.url, item.actor.url)
+            binding.setVariable(BR.gavatar, item.actor.gravatar_id)
             Picasso.with(MainApp.instance.applicationContext).load(item.actor.avatar_url).into(itemView.img)
 
         }

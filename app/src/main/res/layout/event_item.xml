@@ -14,6 +14,9 @@
         <variable
             name="url"
             type="String"/>
+        <variable
+            name="gavatar"
+            type="String"/>
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -71,6 +74,13 @@
 
             <TextView
                 android:text='@{url}'
+                style="@style/SecondaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="url"/>
+
+            <TextView
+                android:text='@{gavatar}'
                 style="@style/SecondaryTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
