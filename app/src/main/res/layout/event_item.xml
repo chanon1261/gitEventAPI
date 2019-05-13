@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="java.text.NumberFormat"/>
+        <variable
+            name="id"
+            type="String"/>
+        <variable
+            name="login"
+            type="String"/>
+        <variable
+            name="display"
+            type="String"/>
+        <variable
+            name="url"
+            type="String"/>
+        <variable
+            name="gavatar"
+            type="String"/>
+    </data>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:paddingTop="@dimen/material_padding">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="@dimen/material_padding"
+            android:layout_marginLeft="@dimen/material_padding"
+            tools:src="@drawable/ic_demo"
+            android:src="@drawable/ic_demo"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/material_padding"
+            android:layout_marginLeft="@dimen/material_list_padding_left"
+            android:layout_marginRight="@dimen/material_padding"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@{id}"
+                style="@style/PrimaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/material_padding_quarter"
+                android:layout_marginRight="@dimen/material_padding_double"
+                android:ellipsize="end"
+                android:lines="1"
+                tools:text="ID"/>
+
+            <TextView
+                android:text="@{login}"
+                style="@style/SecondaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/material_padding_quarter"
+                tools:text="login"/>
+
+            <TextView
+                android:text='@{display}'
+                style="@style/SecondaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="display"/>
+
+            <TextView
+                android:text='@{url}'
+                style="@style/SecondaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="url"/>
+
+            <TextView
+                android:text='@{gavatar}'
+                style="@style/SecondaryTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="url"/>
+
+
+        </LinearLayout>
+    </FrameLayout>
+</layout>
