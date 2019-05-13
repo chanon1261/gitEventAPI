@@ -24,7 +24,7 @@ class AppModule(private val mainApp: MainApp) {
     @Singleton
     fun provideGitHubApiService(): GitHubApiService {
         val interceptor = HttpLoggingInterceptor();
-        interceptor.setLevel(if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE);
+        interceptor.level = if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE;
         val client = OkHttpClient.Builder().addInterceptor(interceptor).build();
 
         return Retrofit.Builder()

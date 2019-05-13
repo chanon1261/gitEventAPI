@@ -3,16 +3,21 @@
     <data>
         <import type="java.text.NumberFormat"/>
         <variable
-            name="actor"
-            type="com.example.android.test.model.Actor"/>
+            name="id"
+            type="String"/>
         <variable
-            name="type"
+            name="login"
+            type="String"/>
+        <variable
+            name="display"
+            type="String"/>
+        <variable
+            name="url"
             type="String"/>
     </data>
 
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/repositoryItemRootLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackground"
@@ -20,7 +25,6 @@
         android:paddingTop="@dimen/material_padding">
 
         <ImageView
-            android:id="@+id/repositoryItemImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginBottom="@dimen/material_padding"
@@ -39,8 +43,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/repositoryItemTitle"
-                android:text="@{actor.id}"
+                android:text="@{id}"
                 style="@style/PrimaryTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -48,54 +51,31 @@
                 android:layout_marginRight="@dimen/material_padding_double"
                 android:ellipsize="end"
                 android:lines="1"
-                tools:text="JetBrains/kotlin"/>
+                tools:text="ID"/>
 
             <TextView
-                android:id="@+id/repositoryItemDescription"
-                android:text="@{actor.display_login}"
+                android:text="@{login}"
                 style="@style/SecondaryTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/material_padding_quarter"
-                tools:text="The Kotlin Programming Language"/>
+                tools:text="login"/>
 
             <TextView
-                android:id="@+id/repositoryItemLastUpdated"
-                android:text='@{type}'
+                android:text='@{display}'
                 style="@style/SecondaryTextStyle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:text="Updated 6 hours ago"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:gravity="center_vertical"
-            android:orientation="horizontal"
-            android:paddingRight="@dimen/material_padding">
+                tools:text="display"/>
 
             <TextView
-                android:id="@+id/repositoryItemStarCount"
-                android:text='@{actor.gravatar_id}'
+                android:text='@{url}'
                 style="@style/SecondaryTextStyle"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/material_padding_quarter"
-                android:textColor="@color/primary_text"
-                tools:text="532"/>
+                tools:text="url"/>
 
-            <ImageView
-                android:layout_width="16dp"
-                android:layout_height="16dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ic_demo"/>
+
         </LinearLayout>
-
-        <View
-            style="@style/HorizontalDividerStyle"
-            android:layout_gravity="bottom"
-            android:layout_marginLeft="@dimen/material_list_padding_left"/>
     </FrameLayout>
 </layout>

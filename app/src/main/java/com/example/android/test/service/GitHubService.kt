@@ -6,20 +6,20 @@ import rx.Observable
 import java.util.ArrayList
 import javax.inject.Inject
 
-open class GitHubService {
+class GitHubService() {
 
     @Inject
     lateinit var gitHubApiService: GitHubApiService
 
-    constructor() {
+    init {
         MainApp.graph.inject(this)
     }
 
-    open fun searchRepositories(query: String): Observable<List<Repository>> {
-        if (query.isBlank()) {
-            return Observable.just(ArrayList())
+    fun searchRepositories(query: String): Observable<List<Repository>> {
+        return if (query.isBlank()) {
+            Observable.just(ArrayList())
         } else {
-            return gitHubApiService.searchRepositories(query).map { it.items }
+            gitHubApiService.searchRepositories(query).map { it.items }
         }
     }
 
@@ -28,4 +28,6 @@ open class GitHubService {
     fun getRepositoryReadme(owner: String, repository: String) = gitHubApiService.getRepositoryReadme(owner, repository)
 
     fun updateGist(updateGist: String) = gitHubApiService.updateGist(updateGist)
+
+    fun getEvent(q: String) = gitHubApiService.getEvent(q)
 }

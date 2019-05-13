@@ -36,9 +36,9 @@ class RepositoryAdapter(val context: Context) : RecyclerView.Adapter<RepositoryA
         val context: Context = binding.root.context
 
         fun bind(repository: Repository) {
-            binding.setVariable(BR.repo, repository)
-            binding.setVariable(BR.pushedDate, PrettyTime().format(repository.pushed_at))
-            itemView.repositoryItemImage.loadUrl("https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png")
+//            binding.setVariable(BR.actor, repository)
+//            binding.setVariable(BR.type, PrettyTime().format(repository.pushed_at))
+//            itemView.repositoryItemImage.loadUrl("https://www.google.co.th/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png")
             //itemView.repositoryItemRootLayout.setOnClickListener { context.startActivity(RepositoryDetailActivity.getIntent(context, repository)) }
         }
     }

@@ -1,5 +1,6 @@
 package com.example.android.test.service
 
+import com.example.android.test.model.Event
 import com.example.android.test.model.Repository
 import com.example.android.test.model.RepositoryReadme
 import com.example.android.test.model.RepositorySearchResults
@@ -25,5 +26,8 @@ interface GitHubApiService {
 
     @PUT("gists/{id}")
     fun updateGist(@Path("id") id: String): Observable<RepositorySearchResults>
+
+    @GET("{q}")
+    fun getEvent(@Path("q") id: String): Observable<List<Event>>
 
 }
