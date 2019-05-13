@@ -4,7 +4,7 @@
         <import type="java.text.NumberFormat"/>
         <variable
             name="repo"
-            type="com.bananacoding.android.pin_assistant_android.model.Repository"/>
+            type="com.example.android.test.model.Repository"/>
         <variable
             name="pushedDate"
             type="String"/>

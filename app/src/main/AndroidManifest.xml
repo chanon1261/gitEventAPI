@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bananacoding.android.pin_assistant_android">
+    package="com.example.android.test">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".MainApp"
+        android:name="com.example.android.test.MainApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activity.MainActivity"
+            android:name="com.example.android.test.activity.DemoActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize">
@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DemoActivity"></activity>
+        <activity android:name="com.example.android.test.activity.MainActivity"></activity>
     </application>
 
 </manifest>

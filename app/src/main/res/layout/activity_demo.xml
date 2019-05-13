@@ -6,11 +6,12 @@
     android:orientation="vertical"
     tools:context=".activity.DemoActivity">
 
-    <com.bananacoding.android.pin_assistant_android.view.SearchCardView
+    <com.example.android.test.view.SearchCardView
         android:id="@+id/mainSearchCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/primary"
+        android:visibility="gone"
         android:elevation="@dimen/toolbar_elevation" />
 
     <FrameLayout
